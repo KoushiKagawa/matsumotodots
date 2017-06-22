@@ -15,7 +15,7 @@ $signature = $_SERVER['HTTP_' . \LINE\LINEBot\Constant\HTTPHeader::LINE_SIGNATUR
 //ここからぐるなびとの連携
 use Symfony\Component\HttpFoundation\Request;
 
-$app = new Silex\Application();
+//$app = new Silex\Application();
 $app->post('/callback', function (Request $request) use ($app) {
     $body = json_decode($request->getContent(), true);
     foreach ($body['result'] as $msg) {
